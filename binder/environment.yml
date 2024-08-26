@@ -186,4 +186,5 @@ dependencies:
 - zstd=1.5.6=ha6fb4c9_0
 - pip:
     - git+https://github.com/bluesky/bluesky.git@f25df0b24b30cac20098b487c54d1113695a915f
+    - softioc==4.3.0
 
