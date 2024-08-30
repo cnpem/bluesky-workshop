@@ -138,13 +138,11 @@ dependencies:
 - pyqt=5.15.9=py312h949fe66_5
 - pyqt5-sip=12.12.2=py312h30efb56_5
 - pyqtgraph=0.13.7=pyhd8ed1ab_0
-- pyside6=6.7.2=py312hb5137db_2
 - python=3.12.5=h2ad013b_0_cpython
 - python-dateutil=2.9.0=pyhd8ed1ab_0
 - python_abi=3.12=5_cp312
 - qhull=2020.2=h434a139_5
 - qt-main=5.15.8=ha2b5568_22
-- qt6-main=6.7.2=h0f8cd61_2
 - readline=8.2=h8228510_1
 - setuptools=72.1.0=pyhd8ed1ab_0
 - sip=6.7.12=py312h30efb56_0
@@ -187,4 +185,5 @@ dependencies:
 - pip:
     - git+https://github.com/bluesky/bluesky.git@f25df0b24b30cac20098b487c54d1113695a915f
     - softioc==4.3.0
+    - ipympl
 
