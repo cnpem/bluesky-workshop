@@ -1,4 +1,4 @@
-from bluesky.callbacks import LiveFitPlot, LivePlot
+from bluesky.callbacks import LiveFitPlot, LivePlot, LiveScatter, LiveGrid
 
 def create_jupyter_live_plot(plot_cls):
     import matplotlib.pyplot as plt
@@ -11,8 +11,8 @@ def create_jupyter_live_plot(plot_cls):
             super().__init__(*args, ax=ax, **kwargs)
             self._figure = fig
     
-        def __call__(self, event_name, event_data):
-            super().__call__(event_name, event_data)
+        def __call__(self, event_name, event_data, *args, **kwargs):
+            super().__call__(event_name, event_data, *args, **kwargs)
             display(self._figure, clear=True)
             if event_name == "stop":
                 clear_output(True)
@@ -21,4 +21,6 @@ def create_jupyter_live_plot(plot_cls):
     return __JupyterLivePlot
 
 JupyterLivePlot = create_jupyter_live_plot(LivePlot)
+JupyterLiveScatter = create_jupyter_live_plot(LiveScatter)
 JupyterLiveFitPlot = create_jupyter_live_plot(LiveFitPlot)
+JupyterLiveGrid = create_jupyter_live_plot(LiveGrid)
